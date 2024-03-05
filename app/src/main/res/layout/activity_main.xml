@@ -7,12 +7,46 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
+
+    <LinearLayout
+        android:id="@id/editorLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="MissingConstraints">
+
+        <EditText
+            android:id="@+id/textView"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="15"
+            android:autofillHints=""
+            android:inputType="none"
+            android:text="@string/display"
+            android:textAlignment="textEnd"
+            android:textSize="36sp"
+            tools:ignore="LabelFor" />
+
+        <ImageButton
+            android:id="@+id/buttonBackspace"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:importantForAccessibility="no"
+            android:src="@drawable/baseline_backspace_24"
+            android:text="@string/backspace" />
+    </LinearLayout>
+
     <TableLayout
         android:id="@+id/tableLayout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView"
+        app:layout_constraintTop_toBottomOf="@+id/editorLayout"
         app:layout_constraintVertical_bias="0.9"
         tools:layout_editor_absoluteX="5dp">
 
@@ -22,7 +56,7 @@
 
             <Button
                 android:id="@+id/buttonClear"
-                style="?android:attr/buttonBarButtonStyle"
+                style="?attr/materialButtonOutlinedStyle"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
@@ -30,7 +64,7 @@
 
             <Button
                 android:id="@+id/buttonParentheses"
-                style="?android:attr/buttonBarButtonStyle"
+                style="?attr/materialButtonOutlinedStyle"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
@@ -38,7 +72,7 @@
 
             <Button
                 android:id="@+id/buttonExponent"
-                style="?android:attr/buttonBarButtonStyle"
+                style="?attr/materialButtonOutlinedStyle"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
@@ -46,7 +80,7 @@
 
             <Button
                 android:id="@+id/buttonDivide"
-                style="?android:attr/buttonBarButtonStyle"
+                style="?attr/materialButtonOutlinedStyle"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
@@ -59,7 +93,7 @@
 
             <Button
                 android:id="@+id/button7"
-                style="?android:attr/buttonBarButtonStyle"
+                style="?attr/materialButtonOutlinedStyle"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
@@ -67,7 +101,7 @@
 
             <Button
                 android:id="@+id/button8"
-                style="?android:attr/buttonBarButtonStyle"
+                style="?attr/materialButtonOutlinedStyle"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
@@ -75,7 +109,7 @@
 
             <Button
                 android:id="@+id/button9"
-                style="?android:attr/buttonBarButtonStyle"
+                style="?attr/materialButtonOutlinedStyle"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
@@ -83,7 +117,7 @@
 
             <Button
                 android:id="@+id/buttonMultiply"
-                style="?android:attr/buttonBarButtonStyle"
+                style="?attr/materialButtonOutlinedStyle"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
@@ -96,7 +130,7 @@
 
             <Button
                 android:id="@+id/button4"
-                style="?android:attr/buttonBarButtonStyle"
+                style="?attr/materialButtonOutlinedStyle"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
@@ -104,7 +138,7 @@
 
             <Button
                 android:id="@+id/button5"
-                style="?android:attr/buttonBarButtonStyle"
+                style="?attr/materialButtonOutlinedStyle"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
@@ -112,7 +146,7 @@
 
             <Button
                 android:id="@+id/button6"
-                style="?android:attr/buttonBarButtonStyle"
+                style="?attr/materialButtonOutlinedStyle"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
@@ -120,7 +154,7 @@
 
             <Button
                 android:id="@+id/buttonSubtract"
-                style="?android:attr/buttonBarButtonStyle"
+                style="?attr/materialButtonOutlinedStyle"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
@@ -133,7 +167,7 @@
 
             <Button
                 android:id="@+id/button1"
-                style="?android:attr/buttonBarButtonStyle"
+                style="?attr/materialButtonOutlinedStyle"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
@@ -141,7 +175,7 @@
 
             <Button
                 android:id="@+id/button2"
-                style="?android:attr/buttonBarButtonStyle"
+                style="?attr/materialButtonOutlinedStyle"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
@@ -149,7 +183,7 @@
 
             <Button
                 android:id="@+id/button3"
-                style="?android:attr/buttonBarButtonStyle"
+                style="?attr/materialButtonOutlinedStyle"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
@@ -157,7 +191,7 @@
 
             <Button
                 android:id="@+id/buttonAdd"
-                style="?android:attr/buttonBarButtonStyle"
+                style="?attr/materialButtonOutlinedStyle"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
@@ -170,7 +204,7 @@
 
             <Button
                 android:id="@+id/buttonPlusMinus"
-                style="?android:attr/buttonBarButtonStyle"
+                style="?attr/materialButtonOutlinedStyle"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
@@ -178,7 +212,7 @@
 
             <Button
                 android:id="@+id/button0"
-                style="?android:attr/buttonBarButtonStyle"
+                style="?attr/materialButtonOutlinedStyle"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
@@ -186,7 +220,7 @@
 
             <Button
                 android:id="@+id/buttonPoint"
-                style="?android:attr/buttonBarButtonStyle"
+                style="?attr/materialButtonOutlinedStyle"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
@@ -194,32 +228,14 @@
 
             <Button
                 android:id="@+id/buttonEquals"
-                style="?android:attr/buttonBarButtonStyle"
+                style="?attr/materialButtonOutlinedStyle"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:text="@string/equals" />
         </TableRow>
+
     </TableLayout>
 
-    <TextView
-        android:id="@+id/textView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="30dp"
-        android:text="@string/display"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <Button
-        android:id="@+id/buttonBackspace"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/backspace"
-        app:layout_constraintBottom_toTopOf="@+id/tableLayout"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.99"
-        app:layout_constraintStart_toStartOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
